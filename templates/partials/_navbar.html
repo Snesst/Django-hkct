@@ -15,31 +15,33 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
+          {% comment %} make "active" once pressing wording "/", "about", "listings"  {% endcomment %}          
           <li {% if '/' == request.path %}
-          {% comment %} make "active" once pressing wording "about"  {% endcomment %}
           class="nav-item active mr-3"
           {% else %}
           class="nav-item mr-3"  
           {% endif %}
           >
-
             <a class="nav-link" href={% url "index" %}>Home</a>
 
-          </>
           <li {% if 'about' in request.path %}
           class="nav-item active mr-3"
           {% else %}
           class="nav-item mr-3"  
           {% endif %}
           >
-
             <a class="nav-link" href={% url "about" %}>About</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="listings.html">Featured Listings</a>
-          </li>
-        </ul>
 
+          <li {% if 'listings' in request.path %}
+          class="nav-item active mr-3"
+          {% else %}
+          class="nav-item mr-3"  
+          {% endif %}
+          >
+            <a class="nav-link" href={% url "listings" %}>Featured Listings</a>
+
+        </ul>
+        
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mr-3">
             <a class="nav-link" href="register.html">

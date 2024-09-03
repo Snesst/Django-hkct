@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include("pages.urls")), #put the most popular url in the fist line here
+    path('listings/', include("listings.urls")), #goto the app "listings" to find the urls.py
     path('admin/', admin.site.urls),
 ]
