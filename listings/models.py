@@ -15,7 +15,7 @@ class Listing(models.Model):
     bathrooms = models.DecimalField(max_digits=2, decimal_places=1)
     clubhouse = models.IntegerField()
     sqft = models.IntegerField()
-    estate_size = models.FloatField(default=0989)
+    estate_size = models.FloatField(default=0.0)
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(auto_now_add=True) #auto date from the system
     photo_main = models.ImageField (upload_to='photos/%Y/%m/%d/') #essential photo
@@ -25,15 +25,6 @@ class Listing(models.Model):
     photo_4 = models.ImageField (upload_to='photos/%Y/%m/%d/', blank=True)
     photo_5 = models.ImageField (upload_to='photos/%Y/%m/%d/', blank=True)
     photo_6 = models.ImageField (upload_to='photos/%Y/%m/%d/', blank=True)
-
-class Realtor(models.Model):
-    name = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='photos/%Y/%m/%d?')
-    description = models.TextField(blank=True)
-    phone = models.CharField(max_length=20)
-    email = models.CharField(max_length=50)
-    is_mvp = models.BooleanField(default=False)
-    hire_date = models.DateTimeField(default=datetime.now, blank=True)
 
 #return "title" of the housing in class Listing
     def __str__(self):
