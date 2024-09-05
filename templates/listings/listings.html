@@ -1,9 +1,10 @@
-{%extends 'base.html'%} {% block content%} {%load static %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 <section id="showcase-inner" class="py-5 text-white">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Browse Our Properties</h1>
+          <h1 class="display-4">{{name}}</h1>
+          {% comment %} <h1 class="display-4">Browse Our Properties, run an expression from </h1> {% endcomment %}
           <p class="lead">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
             pariatur!
