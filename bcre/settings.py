@@ -39,10 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages.apps.PagesConfig',
-    'listings.apps.ListingsConfig',
-    'realtors.apps.RealtorsConfig',
-
+    'pages.apps.PagesConfig', #added
+    'listings.apps.ListingsConfig', #added
+    'realtors.apps.RealtorsConfig', #added
+    'django.contrib.humanize', #added
 ]
 
 MIDDLEWARE = [
